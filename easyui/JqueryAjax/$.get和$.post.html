@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    $.get();
+        语法： $.get("请求地址"，"请求参数"，function(形参){
+        });
+    
+    $.post();
+        语法： $.post("请求地址"，"请求参数"，function(形参){
+        });
+
+    $.getJSON
+        语法：$.getJSON("请求地址"，"请求参数"，function(形参){
+        });
+        注意：getJSON方式要求返回的数据格式满足json格式（json字符串）
+-->
+<body>
+
+</body>
+<!-- 在需要使用的地方引入 -->
+<script src="./js/jquery-3.7.1.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $.get("js/data.json",{},function(data){
+        console.log("get: ",data);
+    })
+    $.post("js/data.json",{},function(data){
+        console.log("post: ",data)
+    })
+    $.getJSON("js/data.json",{},function(d){
+        console.log("json: ",d)
+    })
+</script>
+</html>

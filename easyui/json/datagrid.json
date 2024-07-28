@@ -1,0 +1,22 @@
+[
+    {
+        "code": "java",
+        "name": "JAVA",
+        "price": 200
+    },
+    {
+        "code": "python",
+        "name": "Python",
+        "price": 200
+    },
+    {
+        "code": "c",
+        "name": "C",
+        "price": 200
+    },
+    {
+        "code": "c++",
+        "name": "C++",
+        "price": 200
+    }
+]
