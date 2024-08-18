@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单选择器</title>
+</head>
+
+<body>
+    <form id='myform' name="myform" method="post">
+        <input id="aa" type="checkbox" abc="abc" name="ch" checked="checked"/>aa
+        <input id="bb" type="checkbox" name="ch"/>bb
+    </form>
+</body>
+<!--
+    操作元素的属性
+        属性分类：
+            固有属性：元素本身就有的属性（id,name.class,style）
+            返回值是boolean的属性：checked、selected、disabled
+            自定义属性：用户自己定义的属性
+        attr和prop区别：
+            1.如果是固有属性，attr()和 prop()方法均可获取
+            2.如果是自定义属性，attr()可获取 prop()不可获取
+            3.如果返回值是 boolean 类型属性
+                若设置了属性，attr()返回具体的值，prop()返回true
+                若未设置属性，attr()返回undefined，prop()返回false
+        1.获取属性
+            attr("属性名")
+            prop("属性名")
+        2.设置属性
+            attr("属性名","属性值")
+            prop("属性名","属性值")
+        3.移除属性
+            removeAttr("属性名")
+        总结：
+            如果属性的类型是boolean，则使用prop()方法（checked，selected，disabled），否则使用attr()方法
+-->
+<script src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+    // 获取name属性
+    var name = $("#aa").attr("name");
+    console.log(name)
+    var name1 = $("#aa").prop("name");
+    console.log(name1);
+    // 返回值是boolean的属性
+    var ck1 = $("#aa").attr("checked"); // checked
+    var ck2 = $("#aa").prop("checked"); // true
+    console.log(ck1);
+    console.log(ck2);
+    // 返回值是boolean的属性（元素未设置属性）
+    var ck3 = $("#bb").attr("checked"); // undefind
+    var ck4 = $("#bb").prop("checked"); // false
+    console.log(ck3);
+    console.log(ck4);
+    // 自定义属性
+    var abc1 = $("#aa").attr("abc");
+    var abc2 = $("#aa").prop("abc");
+    console.log(abc1);
+    console.log(abc2);
+    // 设置属性
+    // 固有属性
+    $("#aa").attr("value","1");
+    $("#bb").prop("value","2");
+    // 返回值是boolean的属性
+    $("#aa").prop("checked",false);
+    // $("#aa").attr("checked","checked")
+    $("#bb").prop("checked",true);
+    // 自定义属性
+    $("#aa").attr("name","jjj")
+    $("#aa").prop("age","kkk");
+    // 移除属性
+    $("#bb").removeAttr("abc");
+</script>
+
+</html>
