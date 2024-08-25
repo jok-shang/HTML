@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素的样式</title>
+</head>
+<style type="text/css">
+    div{
+        padding: 8px;
+        width: 180px;
+    }
+    .blue{
+        background: blue;
+    }
+    .larger{
+        font-size: 30px;
+    }
+    .green{
+        background: green;
+    }
+    .pink{
+        background: pink;
+    }
+</style>
+<body>
+    <div id="conBlue" class="blue larger">天蓝色</div>
+    <div id="conRed">大红色</div>
+    <div id="remove" class="blue larger">天蓝色</div>
+</body>
+<!-- 
+    操作元素的样式
+        attr("class")           获取元素的样式名
+        attr("class","样式名")  设置元素的样式 (设置样式原本的样式会被覆盖)
+        addclass("样式名")      添加样式(在原来的样式基础上添加样式，原本的样式会保留，如果出现相同的样式，则以样式中后定义的为准)
+        css()                   css("具体样式名","样式值")；设置单个样式
+                                css({"具体样式名":"样式值","具体样式名":"样式值"}); 设置多个样式
+        removeClass("样式名")   移除样式
+-->
+<script src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+    // 获取元素的样式名
+    var clas = $("#conBlue").attr("class");
+    console.log(clas);
+    // 设置元素的样式
+    $("#conBlue").attr("class","green");
+    // 添加样式
+    $("#conBlue").addClass("larger")
+    $("#conBlue").addClass("pink")
+    // 添加具体的样式（行内样式）
+    $("#conRed").css("font-size","40px");
+    $("#conRed").css({"font-famile":"楷体","color":"red"});
+    // 移除样式
+    $("#remove").removeClass("larger")
+</script>
+
+</html>

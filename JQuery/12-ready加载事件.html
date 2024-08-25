@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历元素</title>
+</head>
+<style type="text/css">
+    span {
+        color: white;
+        padding: 8px;
+        margin: 5px;
+        float: left;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <p id="p1">文本</p>
+</body>
+<!-- 
+    ready加载事件
+        预加载事件
+        当页面的dom结构加载完毕后执行
+        类似于js中的load事件
+        ready事件可以写多个
+        语法：
+            $(document).ready(function(){
+            
+            });
+        简写
+            $(function(){
+            
+            });
+-->
+<script src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript">
+    // 获取元素
+    console.log($("#p1"))
+
+    $(document).ready(function(){
+        // 获取元素
+        console.log($("#p1"))
+    })
+</script>
+</html>
