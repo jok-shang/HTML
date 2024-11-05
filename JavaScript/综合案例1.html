@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>综合案例1</title>
+</head>
+<body>
+<h2>订单确认</h2>
+
+</body>
+<script>
+    // 1. 用户输入
+    let price = +prompt("输入价格")
+    let num = +prompt("输入商品数量")
+    let address = prompt("输入地址")
+    // 2. 计算总额
+    let total = price * num
+    // 3. 页面打印渲染
+    document.write(`
+    <table>
+    <tr>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>商品数量</th>
+        <th>总价</th>
+        <th>收货地址</th>
+    </tr>
+    <tr>
+        <th>小米</th>
+        <th>${price}元</th>
+        <th>${num}台</th>
+        <th>${total}元</th>
+        <th>${address}</th>
+    </tr>
+</table>
+    `)
+</script>
+<style>
+    h2 {
+        text-align: center;
+    }
+    /* 合并相邻边框*/
+    table {
+        border-collapse: collapse;
+        height: 50px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    th {
+        padding: 5px 20px;
+    }
+    table, th, tr {
+        border: 1px solid #000000;
+    }
+</style>
+</html>
