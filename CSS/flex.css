@@ -36,6 +36,7 @@ header nav a:hover{
 .main{
     /* 计算主页面高度  视口高度 - 头部高度 */
     height: calc(100vh - 100px);
+    /*开启flex布局*/
     display: flex;
 
 }
