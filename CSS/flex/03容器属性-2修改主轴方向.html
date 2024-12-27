@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+        }
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div, .bigbox5 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴方向 */
+            flex-direction: column;
+        }
+        .bigbox3{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴方向 */
+            flex-direction: column-reverse;
+        }
+        .bigbox4{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴方向 */
+            flex-direction: row;
+        }
+        .bigbox5{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 修改主轴方向 */
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="margin-left:600px">修改主轴方向<br>
+            属性： flex-direction<br>
+            row ==========主轴在横向，并且以开始位置显示(*)<br>
+            row-reverse ==========主轴在横向，并且以相反位置显示()<br>
+            column ==========主轴在纵向，并且以开始位置显示(*)<br>
+            column-reverse ==========主轴在纵向，并且以相反位置显示()<br>
+    </h3>
+    <div class="main">
+    <div>默认
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>flex-direction: column;
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>flex-direction: column-reverse;
+        <div class="bigbox3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>flex-direction: row;
+        <div class="bigbox4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>flex-direction: row;
+        <div class="bigbox5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
