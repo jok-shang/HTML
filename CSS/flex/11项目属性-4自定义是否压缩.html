@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+            /* 不挤压 不折行 */
+            flex-shrink: 0;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">自定义是否压缩<br>
+            属性： flex-shrink<br>
+            取值为0 不压缩（会超出）<br>
+            取值为1 压缩子元素宽度<br>
+    </h4>
+    <div class="main">
+    <div>
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

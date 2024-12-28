@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div,
+        .bigbox5 div, .bigbox6 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴对齐 */
+            justify-content: flex-start;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴对齐 */
+            justify-content: flex-end;
+        }
+        .bigbox3{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 修改主轴对齐 */
+            justify-content: center;
+        }
+        .bigbox4{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 修改主轴对齐 */
+            justify-content: space-between;
+        }
+        .bigbox5{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+           /* 修改主轴对齐 */
+           justify-content: space-around;
+        }
+        .bigbox6{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+           /* 修改主轴对齐 */
+           justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">主轴对齐方式(间距)<br>
+            属性： fjustify-content<br>
+            flex-start ==========主轴的开始位置显示（项目之间是没有间距的）<br>
+            flex-end ==========主轴的结束位置显示（项目之间是没有间距的）<br>
+            center ==========主轴居中位置显示（项目之间是没有间距的）<br>
+            space-between ==========主轴的两端环绕，项目与项目之间距离是收尾项目与容器之间距离的2倍<br>
+            space-around ==========主轴的两端对齐<br>
+            space-evenly ==========主轴的间距平分<br>
+    </h4>
+    <div class="main">
+    <div>默认justify-content: flex-start;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>justify-content: flex-end;
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>justify-content: center;
+        <div class="bigbox3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>justify-content: space-between;
+        <div class="bigbox4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>justify-content: space-around;
+        <div class="bigbox5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>justify-content: space-evenly;
+        <div class="bigbox6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

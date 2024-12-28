@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 折行显示 */
+            flex-wrap: nowrap;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 折行显示 */
+            flex-wrap: wrap;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">是否让元素进行折行显示<br>
+            属性： flex-wrap<br>
+            wrap ==========<br>
+            nowrap ==========不折行，默认就是存在挤压效果（没有默认高度会拉伸元素）<br> 
+    </h4>
+    <div class="main">
+    <div>flex-wrap: nowrap;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+        </div>
+    </div>
+    <div>flex-wrap: wrap;
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

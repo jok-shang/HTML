@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改侧轴上面的对齐方式 */
+            align-items: flex-start;
+        }
+        .bigbox1 div:nth-child(1){
+            align-self: flex-start;
+        }
+        .bigbox1 div:nth-child(2){
+            align-self: flex-end;
+        }
+        .bigbox1 div:nth-child(3){
+            align-self: center;
+        }
+        .bigbox1 div:nth-child(4){
+            align-self: baseline;
+        }
+        .bigbox1 div:nth-child(5){
+            /* 高度自适应 */
+            height: auto;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">单独侧轴对齐方式<br>
+            属性： align-self<br>
+            flex-start ==========项目位于侧轴的开始位置显示<br>
+            flex-end ==========项目位于侧轴的结束位置显示<br>
+            center ==========项目位于侧轴的居中位置显示<br>
+            baseline ==========项目位于侧轴的基线位置显示，效果与开始位置一致，实际开发的时候不会使用该属性值<br>
+            stretch ==========侧轴上面的拉伸效果（前提：项目没有高度）<br>
+    </h4>
+    <div class="main">
+    <div>（1）align-self:flex-start; （2）align-self:flex-end; 
+        （3）align-self:center; （4）align-self:baseline; （5）align-self:stretch;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

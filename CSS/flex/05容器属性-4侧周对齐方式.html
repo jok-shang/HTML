@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改侧轴上面的对齐方式 */
+            align-items: flex-start;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+             /* 修改主轴对齐 */
+            align-items: flex-end;
+        }
+        .bigbox3{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 修改主轴对齐 */
+            align-items: center;
+        }
+        .bigbox4{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 修改主轴对齐 */
+            align-items: baseline;
+        }
+        .bigbox5{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+           /* 修改主轴对齐 */
+           align-items: stretch;
+        }
+        .bigbox5 div{
+            width: 30px;
+            /* height: 30px; */
+            border: 2px dashed red;
+        }
+
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">侧轴对齐方式<br>
+            属性： align-items<br>
+            flex-start ==========侧轴的开始位置显示<br>
+            flex-end ==========侧轴的结束位置显示<br>
+            center ==========侧轴的居中位置显示<br>
+            baseline ==========侧轴的基线位置显示，效果与开始位置一致，实际开发的时候不会使用该属性值<br>
+            stretch ==========默认的拉伸效果<br>
+    </h4>
+    <div class="main">
+    <div>默认align-items: flex-start;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>align-items: flex-end;
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>align-items: center;
+        <div class="bigbox3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>align-items: baseline;
+        <div class="bigbox4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <div>align-items: stretch; //不能给高度
+        <div class="bigbox5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+        }
+        .bigbox1 div:nth-child(1){
+            order: 5;
+        }
+        .bigbox1 div:nth-child(5){
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">项目调整子元素顺序<br>
+            属性： order<br>
+            取值可以为正数<br>
+            可以为负数<br>
+            取值越大越靠后面<br>
+            取值越小越靠前面<br>
+            order:auto====0<br>
+    </h4>
+    <div class="main">
+    <div>（1）align-self:flex-start; （2）align-self:flex-end; 
+        （3）align-self:center; （4）align-self:baseline; （5）align-self:stretch;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            display: flex;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div,
+        .bigbox5 div, .bigbox6 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            /*  */
+            display: flex;
+            /* 折行 */
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: flex-start;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 折行 */
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: flex-end;
+        }
+        .bigbox3{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            /* 折行 */
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: center;
+        }
+        .bigbox4{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: space-around;
+        }
+        .bigbox5{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: space-evenly;
+        }
+        .bigbox6{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* 调整行间距属性 */
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">调整行间距属性，侧轴上面进行显示<br>
+            属性： align-content<br>
+            flex-start ==========侧轴的开始位置显示（没有行间距的）<br>
+            flex-end ==========侧轴的结束位置显示（没有行间距的）<br>
+            center ==========侧轴的居中位置显示（没有行间距的）<br>
+            space-around ==========两端环绕<br>
+            space-evenly ==========行间距均分<br>
+            space-between ==========两端对齐<br>
+    </h4>
+    <div class="main">
+    <div>align-content: flex-start;
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+    <div>align-content: flex-end;
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+    <div>align-content: center;
+        <div class="bigbox3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+    <div>align-content: space-around;
+        <div class="bigbox4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+    <div>align-content: space-evenly;
+        <div class="bigbox5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+    <div>align-content: space-between;
+        <div class="bigbox6">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

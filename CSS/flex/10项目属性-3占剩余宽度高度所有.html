@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 2400px;
+            height: 800px;
+            border: 1px solid gray;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bigbox1 div, .bigbox2 div, .bigbox3 div, .bigbox4 div{
+            width: 30px;
+            height: 30px;
+            border: 2px dashed red;
+        }
+        .bigbox1{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+        }
+        .bigbox1 div:nth-child(2){
+            flex: 1;
+        }
+        .bigbox2{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;            
+        }
+        .bigbox2 div:nth-child(1){
+            flex: 1;
+        }
+        .bigbox2 div:nth-child(2){
+            flex: 1;
+        }
+        .bigbox2 div:nth-child(3){
+            flex: 1;
+        }
+        .bigbox3{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;            
+        }
+        .bigbox3 div:nth-child(2){
+            flex: 1;
+        }
+        .bigbox4{
+            width: 300px;
+            height: 300px;
+            border: 10px solid gray;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;            
+        }
+        .bigbox4 div:nth-child(1){
+            flex: 1;
+        }
+        .bigbox4 div:nth-child(2){
+            flex: 1;
+        }
+        .bigbox4 div:nth-child(3){
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h4 style="margin-left:600px">子元素占剩余宽度高度的所有<br>
+            属性： flex<br>
+            前提：如果主轴在横向则实现占剩余宽度所有<br>
+                 主轴在纵向的话，则实现占剩余高度的所有<br>
+            如果所有的项目都使用了flex:1;则实现的效果是均分的情况<br>
+    </h4>
+    <div class="main">
+        <div class="bigbox1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="bigbox2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="bigbox3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="bigbox4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+</body>
+</html>
